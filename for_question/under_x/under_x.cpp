@@ -4,8 +4,8 @@ using namespace std;
 
 int main(void){
     int i,x;
-    int *arr;
     cin>>i>>x;
+    int *arr=new int[i];
     
     for(int f=0;f<i;f++){
         cin>>arr[f];
