@@ -7,7 +7,6 @@ int main(){
     int n=0;
     string a;
     getline(cin,a);
-    cout<<a.size()<<endl;
     while(a.at(n) !='\0'){
         if(a.compare(n,1," ")==0){
             if(n==0||n==a.size()-1){
@@ -22,6 +21,15 @@ int main(){
         else
             break;
     }
-    cout<<num+1;
+
+    if(a.size()==1){
+        if(a.compare(0,1," ")==0){
+            cout<<num;
+        }
+        else
+            cout<<num+1;
+    }
+    else
+        cout<<num+1;
     return 0;
 }
