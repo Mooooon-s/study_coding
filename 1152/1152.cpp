@@ -1,4 +1,5 @@
 #include<iostream>
+#include <string.h>
 using namespace std;
 
 int main(){
@@ -6,9 +7,15 @@ int main(){
     int n=0;
     string a;
     getline(cin,a);
+    cout<<a.size()<<endl;
     while(a.at(n) !='\0'){
         if(a.compare(n,1," ")==0){
-            num++;
+            if(n==0||n==a.size()-1){
+                
+            }
+            else{
+                num++;
+            }
         }
         if(n<a.size()-1)
             n++;
