@@ -9,7 +9,7 @@ int main(){
     cin>>N;
     while(M!=N+1){
         int div=1;
-        while(div!=M/2){
+        while(div!=M+1){
             if(M%div==0 && M/div==div){
                 a.push_back(M);
                 break;
@@ -19,7 +19,7 @@ int main(){
         }
         M++;
     }
-    if(a.size()!=0){
+    if(!a.empty()){
         for(int i=0;i<a.size();i++){
             sum+=a.at(i);
         }
