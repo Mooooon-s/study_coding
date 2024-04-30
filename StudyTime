@@ -1,0 +1,11 @@
+//Commend
+'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+'Alt+Enter' // Triggers `Todo: Toggle Box`
+'Alt+D' // Triggers `Todo: Toggle Done`
+'Alt+C' // Triggers `Todo: Toggle Cancelled`
+'Alt+S' // Triggers `Todo: Toggle Start`
+'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
+
+2024-04-30:
+    ✔ 2108번 통계학 : @started(24-04-30 10:37) @done(24-04-30 12:46) @lasted(2h9m32s)
+    ✔ 10773번 제로 : @started(24-04-30 14:21) @done(24-04-30 14:25) @lasted(4m45s)
