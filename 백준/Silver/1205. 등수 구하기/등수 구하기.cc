@@ -2,13 +2,6 @@
 
 using namespace std;
 
-bool com(int a , int b)
-{
-    return a > b;
-}
-
-map<int,int,greater<int>> m;
-
 int main(void){
     int n,high,less;
     cin >> n >> high >> less;
