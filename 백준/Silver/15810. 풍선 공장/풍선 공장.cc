@@ -1,40 +1,51 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int N, M;
-vector<int> v;
 
-bool is_possible(long long mid) {
-	long long cnt = 0;
-	for (int i = 0; i < N; i++) cnt += mid / v[i];
+long long n , m;
+long long bal;
+long long* blow;
 
-	if (cnt >= M) return true;
-	return false;
+bool vaild(long long mid){
+    long long cnt =0;
+    for(int i=0;i<n;i++){
+        cnt+=(mid/blow[i]);
+    }
+
+    if(cnt >=m) return true;
+    return false;
 }
 
-int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+int main(){
+    cin.tie(0);
+    
+    cin >> n >> m;
+    blow = new long long[n];
 
-	cin >> N >> M;
+    for(int i=0;i<n;i++){
+        cin >> blow[i];
+    }
 
-	for (int i = 0; i < N; i++) {
-		int a;
-		cin >> a;
-		v.push_back(a);
-	}
+    sort(blow, blow+n);
 
-	long long left = 1, right = 1e15, ret = -1;
+    long long a=1;
+    long long b =blow[n-1]*m+1;
+    long long r =-1;
+    
+    while(a<=b){
+        long long mid = (a+b)/2;
 
-	while (left <= right) {
-		long long mid = (left + right) / 2;
-		if (is_possible(mid)) {
-			ret = mid;
-			right = mid - 1;
-		}
-		else left = mid + 1;
-	}
+        if(vaild(mid)){
+            r=mid;
+            b=mid-1;
+        }
+        else{
+            a=mid+1;
+        }
+    }
 
-	cout << ret;
+    cout << r;
+    
+    return 0;
 }
